@@ -16,6 +16,7 @@
     "@mui/x-date-pickers": "^7.18.0",
     "dayjs": "^1.11.13",
     "next": "^14.2.14",
+    "particles.js": "^2.0.0",
     "react": "^18",
     "react-dom": "^18",
     "sweetalert2": "^11.14.1"
