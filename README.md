@@ -1,7 +1,7 @@
 
 # To-Do List Project Frontned
 
-ในส่วนของโปรเจ็คนี้ในฝั่งของ Frontend ใช้ Html JavaScript มี Framework ที่ใช้คือ React(Next) และในส่วนของ Css ใช้ Tailwind Css และ Material-UI ด้วยกัน และใช้ Library Sweertalert2 เพื่อแสดง Alert ต่างๆ และผมได้ทำการสร้าง Api ด้วย Node.js Express.js Mongodb เพื่อทำการ CRUD ข้อมูล Tasks
+ในส่วนของโปรเจ็คนี้ในฝั่งของ Frontend ใช้ Html JavaScript พร้อมทำ Responsive มี Framework ที่ใช้คือ React(Next) และในส่วนของ Css ใช้ Tailwind Css และ Material-UI ด้วยกัน และใช้ Library Sweertalert2 เพื่อแสดง Alert ต่างๆ และผมได้ทำการสร้าง Api ด้วย Node.js Express.js Mongodb เพื่อทำการ CRUD ข้อมูล Tasks
 
 
 
