@@ -111,7 +111,7 @@ export default function TaskCard() {
       {/* <div class="skeleton"></div> */}
 
       <div class="flex flex-col border xs:w-[100%] md:w-[75%] lg:w-[60%] xl:w-[45%] xs:h-[100%] md:h-[85%] xs:p-[20px] md:p-[30px]  rounded-xl bg-[#F5F5F7] max-w-[1080px]">
-        <div class="flex flex-[1] items-center  xs:text-[26px] sm:text-[30px] md:text-[36px] font-semibold max-w-[200px]">
+        <div class="flex flex-[1] border">
           To-Do List
         </div>
 

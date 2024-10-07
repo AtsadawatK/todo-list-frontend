@@ -1,6 +1,7 @@
+
 import "./globals.css";
 
-import ParticlesBackground from "./components/particle/particle";
+import ParticlesBackground from "./components/particle/particle"
 
 export const metadata = {
   title: "To-Do List",
@@ -12,16 +13,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className="font-fredoka"
-        style={{
-          backgroundColor: "#EDDFE0",
-          position: "relative",
-          margin: 0,
-          padding: 0,
-        }}
+        style={{backgroundColor:"#EDDFE0",position:"relative",margin:0,padding:0,}}
       >
-        <div className="hidden md:block">
-          <ParticlesBackground />
-        </div>
+        <ParticlesBackground />
         {children}
       </body>
     </html>
