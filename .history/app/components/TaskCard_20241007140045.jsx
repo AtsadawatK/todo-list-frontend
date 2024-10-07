@@ -94,6 +94,7 @@ export default function TaskCard() {
         const updatedCheckTask = await UpdateCheckedTasks(id, checked);
         console.log("task updated:", updatedCheckTask);
         setShouldFetch(true); 
+        console.log();
       } catch (error) {
         console.error("failed:", error);
       }

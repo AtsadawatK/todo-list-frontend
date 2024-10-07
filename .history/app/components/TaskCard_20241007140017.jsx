@@ -69,7 +69,7 @@ export default function TaskCard() {
     if (result.isConfirmed) {
       try {
         await DeleteTask(id);
-        setShouldFetch(true);
+        setShouldFetch(true); 
         Swal.fire("Deleted!", "Your task has been deleted.", "success");
       } catch (error) {
         Swal.fire("Failed to delete the task.");
@@ -93,7 +93,7 @@ export default function TaskCard() {
         };
         const updatedCheckTask = await UpdateCheckedTasks(id, checked);
         console.log("task updated:", updatedCheckTask);
-        setShouldFetch(true); 
+        console.log();
       } catch (error) {
         console.error("failed:", error);
       }
