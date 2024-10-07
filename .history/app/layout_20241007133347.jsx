@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           padding: 0,
         }}
       >
-        <div className="hidden md:block w-[100vw] h-[100vh]">
+        <div className="hidden md:block ">
           <ParticlesBackground />
         </div>
         {children}
