@@ -98,13 +98,13 @@ export default function AddTask() {
 
   return (
     <>
-      <div className="flex justify-center h-[100vh] items-center w-full">
-        <div className="flex flex-col border  xs:w-[100%] md:w-[75%] lg:w-[60%] xl:w-[45%] xs:h-[100%] md:h-[85%] xs:p-[20px] md:p-[30px]  rounded-xl bg-[#F5F5F7] max-w-[1080px]">
-          <div className="flex  items-center justify-between w-[100%] xs:text-[26px] sm:text-[30px] md:text-[36px] font-semibold pt-5">
+      <div class="flex justify-center h-[100vh] items-center w-full">
+        <div class="flex flex-col border  xs:w-[100%] md:w-[75%] lg:w-[60%] xl:w-[45%] xs:h-[100%] md:h-[85%] xs:p-[20px] md:p-[30px]  rounded-xl bg-[#F5F5F7] max-w-[1080px]">
+          <div class="flex  items-center justify-between w-[100%] xs:text-[26px] sm:text-[30px] md:text-[36px] font-semibold pt-5">
             <div>Add Task</div>
-            <div className="flex flex-[1] justify-end  h-[100%]">
+            <div class="flex flex-[1] justify-end  h-[100%]">
               <div
-                className="flex justify-center items-center xs:w-[40%] sm:w-[30%] md:w-[25%] h-[100%] bg-[#B7B7B7] hover:bg-[#473b35]  hover:text-[#FFFFFF] xs:text-[16px] lg:text-[18px]  text-[black] font-semibold rounded-xl cursor-pointer"
+                class="flex justify-center items-center xs:w-[40%] sm:w-[30%] md:w-[25%] h-[100%] bg-[#B7B7B7] hover:bg-[#473b35]  hover:text-[#FFFFFF] xs:text-[16px] lg:text-[18px]  text-[black] font-semibold rounded-xl cursor-pointer"
                 onClick={LinkToHome}
               >
                 <NavigateBeforeIcon
@@ -115,19 +115,19 @@ export default function AddTask() {
             </div>
           </div>
 
-          <div className="flex flex-col w-[100%] overflow-hidden  h-[100%] py-10">
-            <div className="flex text-[20px] items-center">
+          <div class="flex flex-col w-[100%] overflow-hidden  h-[100%] py-10">
+            <div class="flex text-[20px] items-center">
               Title{" "}
               <div className="flex px-2 text-[red] text-[16px]">
                 {titleError && <span>* Title is required</span>}
               </div>
             </div>
-            <div className="py-3">
+            <div class="py-3">
               <input
                 type="text"
                 name="title"
                 id="title"
-                className="block w-full rounded-md border border-black py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                class="block w-full rounded-md border border-black py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 placeholder="Input Title Here"
                 value={title}
                 onChange={(e) => {
@@ -137,18 +137,18 @@ export default function AddTask() {
               ></input>
             </div>
 
-            <div className="flex text-[20px]">
+            <div class="flex text-[20px]">
               Description{" "}
               <div className="flex px-2 text-[red] text-[16px]">
                 {descriptionError && <span>* Description is required</span>}
               </div>
             </div>
-            <div className="py-3">
+            <div class="py-3">
               <textarea
                 name="description"
                 rows="5"
                 cols="30"
-                className="block w-full rounded-md border border-black py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                class="block w-full rounded-md border border-black py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 placeholder="Input Deacription Here"
                 value={description}
                 onChange={(e) => {
@@ -158,7 +158,7 @@ export default function AddTask() {
               ></textarea>
             </div>
 
-            <div className="flex text-[20px]">
+            <div class="flex text-[20px]">
               Date{" "}
               <div className="flex px-2 text-[red] text-[16px]">
                 {dateError && <span>* Date is required</span>}

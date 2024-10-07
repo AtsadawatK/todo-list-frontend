@@ -118,11 +118,11 @@ export default function TaskCard() {
         <div className="flex xs:flex-[0.8] md:flex-[1] items-start w-[100%] ">
           <div className="flex flex-[1]">
             <div className="flex flex-[1] flex-col ">
-              <div className="xs:text-[18px]  md:text-[20px] font-semibold">
+              <div classNameName="xs:text-[18px]  md:text-[20px] font-semibold">
                 My Tasks
               </div>
 
-              <div className="xs:text-[14px]  md:text-[18px]">{`You have ${TasksCount} tasks left!`}</div>
+              <div classNameName="xs:text-[14px]  md:text-[18px]">{`You have ${TasksCount} tasks left!`}</div>
             </div>
 
             <div className="flex flex-[1] justify-end ">
@@ -139,11 +139,11 @@ export default function TaskCard() {
         <div className="flex flex-[5] flex-col w-[100%] overflow-hidden">
           <div className="grid grid-cols-1 gap-3 w-[100%]  overflow-y-scroll ">
             {loading ? (
-              <div className="flex flex-col gap-2">
+              <div classNameName="flex flex-col gap-2">
                 {Array.from({ length: 3 }).map((_, index) => (
                   <div
                     key={index}
-                    className={`skeleton h-[180px] rounded-xl mr-1 p-3`}
+                    classNameName={`skeleton h-[180px] rounded-xl mr-1 p-3`}
                   />
                 ))}
               </div>
@@ -156,12 +156,12 @@ export default function TaskCard() {
                 return (
                   <div
                     key={task._id}
-                    className={`xs:h-[150px] md:h-[180px] rounded-xl mr-1 p-3 ${
+                    classNameName={`xs:h-[150px] md:h-[180px] rounded-xl mr-1 p-3 ${
                       isChecked ? "bg-[#e3e0da]" : "bg-[#D8D2C2]"
                     }`}
                   >
-                    <div className="flex gap-3 h-[100%]">
-                      <div className="flex flex-[0.5] text-[20px] justify-end items-start">
+                    <div classNameName="flex gap-3 h-[100%]">
+                      <div classNameName="flex flex-[0.5] text-[20px] justify-end items-start">
                         <Checkbox
                           sx={{
                             padding: 0,
@@ -179,34 +179,34 @@ export default function TaskCard() {
                         />
                       </div>
 
-                      <div className="flex flex-col flex-[4] xs:text-[14px] md:text-[20px] justify-start  h-[100%] ">
+                      <div classNameName="flex flex-col flex-[4] xs:text-[14px] md:text-[20px] justify-start  h-[100%] ">
                         <div
-                          className={`flex flex-[1] ${
+                          classNameName={`flex flex-[1] ${
                             isChecked ? "line-through" : ""
                           }`}
                         >
                           {task.title}
                         </div>
-                        <div className="flex flex-[1] xs:text-[11px] md:text-[14px]">
+                        <div classNameName="flex flex-[1] xs:text-[11px] md:text-[14px]">
                           {task.description}
                         </div>
-                        <div className="flex flex-[5]  text-[18px] items-end ">
-                          <div className="flex ">
-                            <div className="flex items-center ">
+                        <div classNameName="flex flex-[5]  text-[18px] items-end ">
+                          <div classNameName="flex ">
+                            <div classNameName="flex items-center ">
                               <EventAvailableIcon
                                 sx={{ width: "20px", height: "20px" }}
                               />
                             </div>
-                            <div className="flex items-center text-[14px] ml-2">
+                            <div classNameName="flex items-center text-[14px] ml-2">
                               {formatDate(task.date)}
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <div className="flex flex-[1] text-[20px]  items-start justify-around  pt-1.5 ">
+                      <div classNameName="flex flex-[1] text-[20px]  items-start justify-around  pt-1.5 ">
                         <div
-                          className="flex items-start cursor-pointer border border-2 border-transparent hover:border hover:border-2 hover:border-[green] rounded-md transition-all duration-500"
+                          classNameName="flex items-start cursor-pointer border border-2 border-transparent hover:border hover:border-2 hover:border-[green] rounded-md transition-all duration-500"
                           onClick={() => {
                             window.location.href = `/${task._id}`;
                           }}
@@ -215,7 +215,7 @@ export default function TaskCard() {
                         </div>
 
                         <div
-                          className="flex items-start cursor-pointer border border-2 border-transparent hover:border hover:border-2 hover:border-[red] rounded-md transition-all duration-500"
+                          classNameName="flex items-start cursor-pointer border border-2 border-transparent hover:border hover:border-2 hover:border-[red] rounded-md transition-all duration-500"
                           onClick={() => handleDeleteTask(task._id)}
                         >
                           <DeleteIcon sx={{ color: "red" }} />

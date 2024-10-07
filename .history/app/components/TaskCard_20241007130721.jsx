@@ -125,9 +125,9 @@ export default function TaskCard() {
               <div className="xs:text-[14px]  md:text-[18px]">{`You have ${TasksCount} tasks left!`}</div>
             </div>
 
-            <div className="flex flex-[1] justify-end ">
+            <div class="flex flex-[1] justify-end ">
               <div
-                className="flex justify-center items-center xs:w-[80%] md:w-[50%] h-[100%] bg-[#705C53] hover:bg-[#473b35]  xs:text-[16px] lg:text-[18px] text-[#F5F5F7] font-semibold rounded-xl cursor-pointer"
+                class="flex justify-center items-center xs:w-[80%] md:w-[50%] h-[100%] bg-[#705C53] hover:bg-[#473b35]  xs:text-[16px] lg:text-[18px] text-[#F5F5F7] font-semibold rounded-xl cursor-pointer"
                 onClick={LinkToAddTask}
               >
                 Add a new task
@@ -136,8 +136,8 @@ export default function TaskCard() {
           </div>
         </div>
 
-        <div className="flex flex-[5] flex-col w-[100%] overflow-hidden">
-          <div className="grid grid-cols-1 gap-3 w-[100%]  overflow-y-scroll ">
+        <div class="flex flex-[5] flex-col w-[100%] overflow-hidden">
+          <div class="grid grid-cols-1 gap-3 w-[100%]  overflow-y-scroll ">
             {loading ? (
               <div className="flex flex-col gap-2">
                 {Array.from({ length: 3 }).map((_, index) => (

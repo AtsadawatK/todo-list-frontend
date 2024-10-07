@@ -139,7 +139,7 @@ export default function TaskCard() {
         <div className="flex flex-[5] flex-col w-[100%] overflow-hidden">
           <div className="grid grid-cols-1 gap-3 w-[100%]  overflow-y-scroll ">
             {loading ? (
-              <div className="flex flex-col gap-2">
+              <div classNameName="flex flex-col gap-2">
                 {Array.from({ length: 3 }).map((_, index) => (
                   <div
                     key={index}

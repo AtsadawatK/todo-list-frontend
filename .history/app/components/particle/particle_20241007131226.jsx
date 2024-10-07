@@ -1,12 +1,15 @@
-"use client"
+"use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import "./style.css";
 
 const ParticlesBackground = () => {
   useEffect(() => {
-    import('particles.js').then(() => {
-      particlesJS('particles-js', {
-        "particles": {
+    // ใช้ require เพื่อโหลด particles.js
+    const particlesJS = require('particles.js');
+
+    particlesJS('particles-js', {
+      "particles": {
         "number": {
           "value": 100,
           "density": {
@@ -99,21 +102,10 @@ const ParticlesBackground = () => {
         }
       },
       "retina_detect": true
-      });
     });
   }, []);
 
-  return <div id="particles-js" style={{ position: "absolute" }} />;
+  return <div id="particles-js" style={{ position: "absolute", width: "100%", height: "100%" }}></div>;
 };
 
-const DynamicParticlesBackground = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  return mounted ? <ParticlesBackground /> : null;
-};
-
-export default DynamicParticlesBackground;
+export default ParticlesBackground;

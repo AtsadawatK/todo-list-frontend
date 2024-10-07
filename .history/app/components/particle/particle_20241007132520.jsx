@@ -1,12 +1,16 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import Particles from "particles.js";
+import "./style.css"
+import React, { useEffect } from 'react';
 
 const ParticlesBackground = () => {
   useEffect(() => {
-    import('particles.js').then(() => {
-      particlesJS('particles-js', {
-        "particles": {
+    if (typeof window !== "undefined") {
+      import('particles.js').then(() => {
+        particlesJS('particles-js', {
+          "particles": {
         "number": {
           "value": 100,
           "density": {
@@ -99,21 +103,15 @@ const ParticlesBackground = () => {
         }
       },
       "retina_detect": true
+        });
       });
-    });
+    }
   }, []);
 
   return <div id="particles-js" style={{ position: "absolute" }} />;
 };
 
-const DynamicParticlesBackground = () => {
-  const [mounted, setMounted] = useState(false);
+export default ParticlesBackground;
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
-  return mounted ? <ParticlesBackground /> : null;
-};
 
-export default DynamicParticlesBackground;

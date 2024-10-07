@@ -107,17 +107,17 @@ export default function TaskCard() {
   }
 
   return (
-    <div className="flex justify-center h-[100vh] items-center w-full">
-      {/* <div className="skeleton"></div> */}
+    <div class="flex justify-center h-[100vh] items-center w-full">
+      {/* <div class="skeleton"></div> */}
 
-      <div className="flex flex-col border xs:w-[100%] md:w-[75%] lg:w-[60%] xl:w-[45%] xs:h-[100%] md:h-[85%] xs:p-[20px] md:p-[30px]  rounded-xl bg-[#F5F5F7] max-w-[1080px]">
-        <div className="flex flex-[1] items-center  xs:text-[26px] sm:text-[30px] md:text-[36px] font-semibold max-w-[200px]">
+      <div class="flex flex-col border xs:w-[100%] md:w-[75%] lg:w-[60%] xl:w-[45%] xs:h-[100%] md:h-[85%] xs:p-[20px] md:p-[30px]  rounded-xl bg-[#F5F5F7] max-w-[1080px]">
+        <div class="flex flex-[1] items-center  xs:text-[26px] sm:text-[30px] md:text-[36px] font-semibold max-w-[200px]">
           To-Do List
         </div>
 
-        <div className="flex xs:flex-[0.8] md:flex-[1] items-start w-[100%] ">
-          <div className="flex flex-[1]">
-            <div className="flex flex-[1] flex-col ">
+        <div class="flex xs:flex-[0.8] md:flex-[1] items-start w-[100%] ">
+          <div class="flex flex-[1]">
+            <div class="flex flex-[1] flex-col ">
               <div className="xs:text-[18px]  md:text-[20px] font-semibold">
                 My Tasks
               </div>
@@ -125,9 +125,9 @@ export default function TaskCard() {
               <div className="xs:text-[14px]  md:text-[18px]">{`You have ${TasksCount} tasks left!`}</div>
             </div>
 
-            <div className="flex flex-[1] justify-end ">
+            <div class="flex flex-[1] justify-end ">
               <div
-                className="flex justify-center items-center xs:w-[80%] md:w-[50%] h-[100%] bg-[#705C53] hover:bg-[#473b35]  xs:text-[16px] lg:text-[18px] text-[#F5F5F7] font-semibold rounded-xl cursor-pointer"
+                class="flex justify-center items-center xs:w-[80%] md:w-[50%] h-[100%] bg-[#705C53] hover:bg-[#473b35]  xs:text-[16px] lg:text-[18px] text-[#F5F5F7] font-semibold rounded-xl cursor-pointer"
                 onClick={LinkToAddTask}
               >
                 Add a new task
@@ -136,8 +136,8 @@ export default function TaskCard() {
           </div>
         </div>
 
-        <div className="flex flex-[5] flex-col w-[100%] overflow-hidden">
-          <div className="grid grid-cols-1 gap-3 w-[100%]  overflow-y-scroll ">
+        <div class="flex flex-[5] flex-col w-[100%] overflow-hidden">
+          <div class="grid grid-cols-1 gap-3 w-[100%]  overflow-y-scroll ">
             {loading ? (
               <div className="flex flex-col gap-2">
                 {Array.from({ length: 3 }).map((_, index) => (

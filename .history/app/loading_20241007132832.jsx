@@ -16,14 +16,14 @@ export default function loading() {
               <div className="xs:text-[14px]  md:text-[18px] text-transparent">{`You have  tasks left!`}</div>
             </div>
 
-            <div className="flex flex-[1] justify-end ">
-              <div className="skeleton flex justify-center items-center xs:w-[80%] md:w-[50%] h-[100%] bg-[#705C53] hover:bg-[#473b35]  xs:text-[16px] lg:text-[18px]  text-[#F5F5F7] font-semibold rounded-xl cursor-pointer"></div>
+            <div class="flex flex-[1] justify-end ">
+              <div class="skeleton flex justify-center items-center xs:w-[80%] md:w-[50%] h-[100%] bg-[#705C53] hover:bg-[#473b35]  xs:text-[16px] lg:text-[18px]  text-[#F5F5F7] font-semibold rounded-xl cursor-pointer"></div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-[5] flex-col w-[100%] overflow-hidden">
-          <div className="grid grid-cols-1 gap-3 w-[100%]  overflow-hidden ">
+        <div class="flex flex-[5] flex-col w-[100%] overflow-hidden">
+          <div class="grid grid-cols-1 gap-3 w-[100%]  overflow-hidden ">
             <div className="flex flex-col gap-2">
               <div className={`skeleton h-[180px] rounded-xl mr-1 p-3`} />
               <div className={`skeleton h-[180px] rounded-xl mr-1 p-3`} />

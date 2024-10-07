@@ -133,7 +133,7 @@ export default function EditTask({ params }) {
               {dateError && <span>* Date is required</span>}
             </div>
           </div>
-          <div className="py-3 text-[20px]">
+          <div class="py-3 text-[20px]">
             <ThemeProvider theme={theme}>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DatePicker
