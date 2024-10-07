@@ -78,6 +78,7 @@ export default function TaskCard() {
   const handleUpdateCheckTask = async (id, isChecked) => {
     console.log("ischeck", isChecked);
 
+    // ลบ Swal.fire ออก
     try {
       const checked = {
         _id: id,
@@ -86,19 +87,12 @@ export default function TaskCard() {
       console.log(checked);
       const updatedCheckTask = await UpdateCheckedTasks(id, checked);
       console.log("task updated:", updatedCheckTask);
-
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Task Saved",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-
-      router.push("/");
     } catch (error) {
       console.error("failed:", error);
     }
+
+    // คุณสามารถเรียกใช้งานฟังก์ชันอื่นๆ ที่ต้องการได้ที่นี่
+    router.push("/");
   };
 
   function formatDate(dateString) {

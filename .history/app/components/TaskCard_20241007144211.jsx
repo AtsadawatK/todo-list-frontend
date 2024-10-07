@@ -77,28 +77,30 @@ export default function TaskCard() {
 
   const handleUpdateCheckTask = async (id, isChecked) => {
     console.log("ischeck", isChecked);
+    const result = await Swal.fire({
+      title: "Do you want to save the changes?",
+      showDenyButton: true,
+      confirmButtonText: "Save",
+      denyButtonText: `Don't save`,
+    });
 
-    try {
-      const checked = {
-        _id: id,
-        checked: isChecked,
-      };
-      console.log(checked);
-      const updatedCheckTask = await UpdateCheckedTasks(id, checked);
-      console.log("task updated:", updatedCheckTask);
+      try {
+        const checked = {
+          _id: id,
+          checked: isChecked,
+        };
+        console.log(checked)
+        const updatedCheckTask = await UpdateCheckedTasks(id, checked);
+        console.log("task updated:", updatedCheckTask);
+        console.log();
+      } catch (error) {
+        console.error("failed:", error);
+      }
 
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Task Saved",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-
+      Swal.fire("Saved!", "", "success");
       router.push("/");
-    } catch (error) {
-      console.error("failed:", error);
     }
+
   };
 
   function formatDate(dateString) {

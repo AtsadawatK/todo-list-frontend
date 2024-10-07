@@ -33,7 +33,7 @@ export default function TaskCard() {
         }
         setLoading(false);
         const data = await response.json();
-
+        console.log(data)
         setTasks(data);
       } catch (error) {
         console.error("Failed :", error);
@@ -77,27 +77,28 @@ export default function TaskCard() {
 
   const handleUpdateCheckTask = async (id, isChecked) => {
     console.log("ischeck", isChecked);
+    const result = await Swal.fire({
+      title: "Do you want to save the changes?",
+      showDenyButton: true,
+      confirmButtonText: "Save",
+      denyButtonText: `Don't save`,
+    });
+    if (result.isConfirmed) {
+      try {
+        const checked = {
+          _id: id,
+          checked: isChecked,
+        };
+        console.log(checked)
+        const updatedCheckTask = await UpdateCheckedTasks(id, checked);
+        console.log("task updated:", updatedCheckTask);
+        console.log();
+      } catch (error) {
+        console.error("failed:", error);
+      }
 
-    try {
-      const checked = {
-        _id: id,
-        checked: isChecked,
-      };
-      console.log(checked);
-      const updatedCheckTask = await UpdateCheckedTasks(id, checked);
-      console.log("task updated:", updatedCheckTask);
-
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Task Saved",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-
+      Swal.fire("Saved!", "", "success");
       router.push("/");
-    } catch (error) {
-      console.error("failed:", error);
     }
   };
 

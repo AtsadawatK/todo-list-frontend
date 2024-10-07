@@ -87,6 +87,7 @@ export default function TaskCard() {
       const updatedCheckTask = await UpdateCheckedTasks(id, checked);
       console.log("task updated:", updatedCheckTask);
 
+      // แสดง Swal.fire แทนที่จะแจ้งเตือนการบันทึก
       Swal.fire({
         position: "center",
         icon: "success",
@@ -95,6 +96,7 @@ export default function TaskCard() {
         timer: 1500,
       });
 
+      // คุณสามารถเรียกใช้งานฟังก์ชันอื่นๆ ที่ต้องการได้ที่นี่
       router.push("/");
     } catch (error) {
       console.error("failed:", error);

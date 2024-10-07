@@ -92,7 +92,6 @@ export default function TaskCard() {
         icon: "success",
         title: "Task Saved",
         showConfirmButton: false,
-        timer: 1500,
       });
 
       router.push("/");
