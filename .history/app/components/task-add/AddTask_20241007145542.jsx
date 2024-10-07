@@ -140,7 +140,7 @@ export default function AddTask() {
             <div className="flex text-[20px]">
               Description{" "}
               <div className="flex px-2 text-[red] text-[16px]">
-                {descriptionError && <span>* Description is required and Maximum is 250 characters</span>}
+                {descriptionError && <span>* Description is required and Maximu 250 characters</span>}
 
               </div>
             </div>

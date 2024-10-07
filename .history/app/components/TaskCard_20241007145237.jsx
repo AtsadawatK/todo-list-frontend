@@ -197,7 +197,7 @@ export default function TaskCard() {
     ? <span className="md:hidden xs:inline">{task.description.slice(0, 150)}...</span>
     : <span>{task.description}</span>}
   {task.description.length > 150 && (
-    <span className="xs:hidden md:inline">{task.description.slice(0, 210)}...</span>
+    <span className="xs:hidden md:inline">{task.description.slice(0, 270)}...</span>
   )}
 </div>
                         <div className="flex flex-[5]  text-[18px] items-end ">
