@@ -103,11 +103,7 @@ const ParticlesBackground = () => {
     });
   }, []);
 
-  return <div id="particles-js" style={{ position: "absolute",width: "100%",
-    height: "100%",
-    top: 0,
-    left: 0,
-    zIndex: -1, }} />;
+  return <div id="particles-js" style={{ position: "absolute",width:"100vw",height:"100vh" }} />;
 };
 
 const DynamicParticlesBackground = () => {

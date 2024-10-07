@@ -20,8 +20,8 @@ export default function RootLayout({ children }) {
         }}
       >
 
-          <DynamicParticlesBackground />
 
+          <DynamicParticlesBackground />
 
         {children}
       </body>

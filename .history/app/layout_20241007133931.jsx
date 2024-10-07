@@ -20,8 +20,8 @@ export default function RootLayout({ children }) {
         }}
       >
 
+          <div sx={{width:"100%"}}></div>
           <DynamicParticlesBackground />
-
 
         {children}
       </body>

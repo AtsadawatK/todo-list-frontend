@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import DynamicParticlesBackground from "./components/particle/particle";
+import ParticlesBackground from "./components/particle/particle";
 
 export const metadata = {
   title: "To-Do List",
@@ -20,8 +20,8 @@ export default function RootLayout({ children }) {
         }}
       >
 
-          <DynamicParticlesBackground />
-
+        
+          <ParticlesBackground />
 
         {children}
       </body>
