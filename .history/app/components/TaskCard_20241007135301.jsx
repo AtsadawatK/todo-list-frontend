@@ -36,9 +36,8 @@ export default function TaskCard() {
         console.error("Failed :", error);
       }
     }
-    fetchTasks()
-  }, []);
-
+    
+  }, [tasks]);
 
   const handleCheckTask = (taskId, initialChecked) => {
     setCheckedState((prevState) => ({

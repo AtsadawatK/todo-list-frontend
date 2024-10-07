@@ -37,9 +37,9 @@ export default function TaskCard() {
       }
     }
     fetchTasks()
-  }, []);
+  }, [tasks]);
 
-
+  
   const handleCheckTask = (taskId, initialChecked) => {
     setCheckedState((prevState) => ({
       ...prevState,

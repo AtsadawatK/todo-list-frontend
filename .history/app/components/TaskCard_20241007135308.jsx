@@ -37,8 +37,11 @@ export default function TaskCard() {
       }
     }
     fetchTasks()
-  }, []);
+  }, [tasks]);
 
+  useEffect(() => {
+    fetchTasks();
+  }, []);
 
   const handleCheckTask = (taskId, initialChecked) => {
     setCheckedState((prevState) => ({
