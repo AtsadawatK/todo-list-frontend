@@ -12,7 +12,7 @@ import { UpdateCheckedTasks, DeleteTask } from "../api/ApiRoute";
 export default function TaskCard() {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const [shouldFetch, setShouldFetch] = useState(true);
   const router = useRouter();
   const TasksCount = tasks.filter((task) => task.checked === false).length;
   const [checkedState, setCheckedState] = useState({});
@@ -22,11 +22,9 @@ export default function TaskCard() {
       try {
         const response = await fetch("/api", {
           cache: "no-store",
-  headers: {
-    "Cache-Control": "no-cache, no-store, must-revalidate",
-    Pragma: "no-cache",
-    Expires: "0",
-  },
+          headers: {
+            "Cache-Control": "no-cache",
+          },
         });
         if (!response.ok) {
           throw new Error(`Error: ${response.status}`);
@@ -39,7 +37,10 @@ export default function TaskCard() {
         console.error("Failed :", error);
       }
     }
-    fetchTasks()
+    if (shouldFetch) {
+      fetchTasks();
+      setShouldFetch(false); // Reset the fetch trigger
+    }
   }, []);
 
 
