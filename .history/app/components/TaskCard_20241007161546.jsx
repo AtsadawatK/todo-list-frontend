@@ -214,9 +214,12 @@ export default function TaskCard() {
                         </div>
                       </div>
 
-                      <div className="flex flex-col flex-[1] text-[20px]  items-start justify-between  pt-1.5 ">
-
-                      <div className="flex items-start justify-between w-[100%] ">
+                      <div className="flex flex-[1] text-[20px]  items-start justify-around  pt-1.5 ">
+                      <div className="flex flex-[1] text-[16px] items-start">
+            <span className={`${task.checked ? "text-green-600" : "text-red-600"}`}>
+              {task.checked ? "ดำเนินการเสร็จสิ้น" : "ยังไม่ดำเนินการ"}
+            </span>
+          </div>
                         <div
                           className="flex items-start cursor-pointer border border-2 border-transparent hover:border hover:border-2 hover:border-[green] rounded-md transition-all duration-500"
                           onClick={() => {
@@ -232,14 +235,6 @@ export default function TaskCard() {
                         >
                           <DeleteIcon sx={{ color: "red" }} />
                         </div>
-
-                        </div>
-
-                        <div className="flex  xs:text-[12px] md:text-[16px] justify-end  w-[100%]">
-            <span className={`${task.checked ? "text-green-600" : "text-red-600"}`}>
-              {task.checked ? "Completed" : "Pending"}
-            </span>
-          </div>
                       </div>
                     </div>
                   </div>

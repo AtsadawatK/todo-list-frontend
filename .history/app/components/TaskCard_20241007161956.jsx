@@ -216,7 +216,7 @@ export default function TaskCard() {
 
                       <div className="flex flex-col flex-[1] text-[20px]  items-start justify-between  pt-1.5 ">
 
-                      <div className="flex items-start justify-between w-[100%] ">
+                      <div className="flex items-start justify-between w-[100%]">
                         <div
                           className="flex items-start cursor-pointer border border-2 border-transparent hover:border hover:border-2 hover:border-[green] rounded-md transition-all duration-500"
                           onClick={() => {
@@ -235,7 +235,7 @@ export default function TaskCard() {
 
                         </div>
 
-                        <div className="flex  xs:text-[12px] md:text-[16px] justify-end  w-[100%]">
+                        <div className="flex  text-[16px] justify-end  w-[100%]">
             <span className={`${task.checked ? "text-green-600" : "text-red-600"}`}>
               {task.checked ? "Completed" : "Pending"}
             </span>

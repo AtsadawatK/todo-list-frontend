@@ -235,7 +235,7 @@ export default function TaskCard() {
 
                         </div>
 
-                        <div className="flex  xs:text-[12px] md:text-[16px] justify-end  w-[100%]">
+                        <div className="flex  xs:text-[16px] md:text-[16px] justify-end  w-[100%]">
             <span className={`${task.checked ? "text-green-600" : "text-red-600"}`}>
               {task.checked ? "Completed" : "Pending"}
             </span>
