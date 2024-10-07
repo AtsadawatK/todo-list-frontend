@@ -30,7 +30,6 @@ export default function TaskCard() {
         }
         setLoading(false);
         const data = await response.json();
-        console.log(data)
         setTasks(data);
       } catch (error) {
         console.error("Failed :", error);
