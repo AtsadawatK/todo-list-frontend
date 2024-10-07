@@ -26,7 +26,7 @@ export default function loading() {
 
             <div class="flex flex-[1] justify-end ">
 
-              <div class="skeleton flex justify-center items-center xs:w-[80%] md:w-[50%] h-[100%] bg-[#705C53] hover:bg-[#473b35]  xs:text-[16px] lg:text-[18px]  text-[#F5F5F7] font-semibold rounded-xl cursor-pointer" >
+              <div class="skeleton flex justify-center items-center xs:w-[80%] md:w-[50%] h-[100%] bg-[#705C53] hover:bg-[#473b35]  text-[18px]  text-[#F5F5F7] font-semibold rounded-xl cursor-pointer" >
 
               </div>
             </div>

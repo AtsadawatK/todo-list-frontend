@@ -38,7 +38,6 @@ export default function TaskCard() {
         if (!response.ok) {
           throw new Error(`Error: ${response.status}`);
         }
-        setLoading(false)
         const data = await response.json();
         setTasks(data);
       } catch (error) {
@@ -172,13 +171,11 @@ const handleUpdateCheckTask = async (id,isChecked) =>{
   tasks.map((task) => {
         const isChecked = checkedState[task._id] !== undefined ? checkedState[task._id] : task.checked;
         return (
-          <div key={task._id} className={`xs:h-[150px] md:h-[180px] rounded-xl mr-1 p-3 ${isChecked ? "bg-[#e3e0da]" : "bg-[#D8D2C2]"}`}>
+          <div key={task._id} className={`h-[180px] rounded-xl mr-1 p-3 ${isChecked ? "bg-[#e3e0da]" : "bg-[#D8D2C2]"}`}>
             <div className="flex gap-3 h-[100%]">
               <div className="flex flex-[0.5] text-[20px] justify-end items-start">
-
               <Checkbox
-
-  sx={{ padding: 0, paddingTop: "5px" ,'& .MuiSvgIcon-root': { fontSize: {xs:15,md:24} }}}
+  sx={{ padding: 0, paddingTop: "5px" }}
   checked={isChecked}
   onChange={() => {
     const newCheckedState = !isChecked;
@@ -186,14 +183,13 @@ const handleUpdateCheckTask = async (id,isChecked) =>{
     handleUpdateCheckTask(task._id, newCheckedState);
   }}
 />
-
                   </div>
 
-                  <div className="flex flex-col flex-[4] xs:text-[14px] md:text-[20px] justify-start  h-[100%] ">
+                  <div className="flex flex-col flex-[4] text-[20px] justify-start  h-[100%] ">
                     <div className={`flex flex-[1] ${isChecked ? "line-through" : ""}`}>
                       {task.title}
                     </div>
-                    <div className="flex flex-[1] xs:text-[11px] md:text-[14px]">
+                    <div className="flex flex-[1] text-[14px]">
                       {task.description}
                     </div>
                     <div className="flex flex-[5]  text-[18px] items-end ">

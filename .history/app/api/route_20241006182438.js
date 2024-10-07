@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
     try {
-        const response = await fetch('https://todo-list-backend-tau.vercel.app/tasks', {
+        const response = await fetch('http://localhost:3002/tasks', {
             method: 'GET',
         });
 

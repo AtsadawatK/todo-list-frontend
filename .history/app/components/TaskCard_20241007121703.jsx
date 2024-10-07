@@ -175,10 +175,8 @@ const handleUpdateCheckTask = async (id,isChecked) =>{
           <div key={task._id} className={`xs:h-[150px] md:h-[180px] rounded-xl mr-1 p-3 ${isChecked ? "bg-[#e3e0da]" : "bg-[#D8D2C2]"}`}>
             <div className="flex gap-3 h-[100%]">
               <div className="flex flex-[0.5] text-[20px] justify-end items-start">
-
               <Checkbox
-
-  sx={{ padding: 0, paddingTop: "5px" ,'& .MuiSvgIcon-root': { fontSize: {xs:15,md:24} }}}
+  sx={{ padding: 0, paddingTop: "5px" ,width:"5px",height:"auto"}}
   checked={isChecked}
   onChange={() => {
     const newCheckedState = !isChecked;
@@ -186,7 +184,6 @@ const handleUpdateCheckTask = async (id,isChecked) =>{
     handleUpdateCheckTask(task._id, newCheckedState);
   }}
 />
-
                   </div>
 
                   <div className="flex flex-col flex-[4] xs:text-[14px] md:text-[20px] justify-start  h-[100%] ">

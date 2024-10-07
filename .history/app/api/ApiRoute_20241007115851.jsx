@@ -71,7 +71,7 @@ export const addTask = async (newTask) => {
 
 
   export const UpdateCheckedTasks = async (id, isChecked) => {
-    const response = await fetch(`https://todo-list-backend-tau.vercel.app/updatechecktask/${id}`, {
+    const response = await fetch(`http://localhost:3002/updatechecktask/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -92,7 +92,7 @@ export const addTask = async (newTask) => {
 
     useEffect(() => {
         async function getTaskfromID() {
-            const respone = await fetch (`https://todo-list-backend-tau.vercel.app/tasks/${id}`);
+            const respone = await fetch (`http://localhost:3002/tasks/${id}`);
             const data = await respone.json();
             setTaskfromID(data);
         }
@@ -106,7 +106,7 @@ export const addTask = async (newTask) => {
 
 export async function DeleteTask(id) {
     try {
-        const response = await fetch(`https://todo-list-backend-tau.vercel.app/deletetask/${id}`, {
+        const response = await fetch(`http://localhost:3002/deletetask/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

@@ -178,7 +178,10 @@ const handleUpdateCheckTask = async (id,isChecked) =>{
 
               <Checkbox
 
-  sx={{ padding: 0, paddingTop: "5px" ,'& .MuiSvgIcon-root': { fontSize: {xs:15,md:24} }}}
+  sx={{ padding: 0, paddingTop: "5px" ,size: {
+    xs: 'small',  // ขนาดหน้าจอ xs
+    md: '',       // ขนาดหน้าจอ md เป็นค่าว่าง
+  },}}
   checked={isChecked}
   onChange={() => {
     const newCheckedState = !isChecked;

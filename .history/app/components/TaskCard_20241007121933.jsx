@@ -177,8 +177,8 @@ const handleUpdateCheckTask = async (id,isChecked) =>{
               <div className="flex flex-[0.5] text-[20px] justify-end items-start">
 
               <Checkbox
-
-  sx={{ padding: 0, paddingTop: "5px" ,'& .MuiSvgIcon-root': { fontSize: {xs:15,md:24} }}}
+              size="small"
+  sx={{ padding: 0, paddingTop: "5px" ,}}
   checked={isChecked}
   onChange={() => {
     const newCheckedState = !isChecked;
